@@ -1,6 +1,7 @@
 # WeatherOne
 
-Simple and quick weather app for Android devices.
+![images/Icon.png]
+**WeatherOne:** Simple and quick weather app for Android devices.
 
 Built for the Gabb Phone Z2 and Gabb Phone Plus.
 
