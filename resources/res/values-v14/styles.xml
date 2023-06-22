@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AIActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:titleTextStyle">@style/AIActionBarTitle</item>
+    </style>
+    <style name="AIActionBarTitle">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="AIAlertDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AIDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme">
+        <item name="android:cacheColorHint">#000</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:actionBarStyle">@style/AIActionBar</item>
+        <item name="android:dialogTheme">@style/AIDialog</item>
+        <item name="windowActionBar">true</item>
+        <item name="actionBarStyle">@style/AIActionBar</item>
+        <item name="dialogTheme">@style/AIDialog</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Button">
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

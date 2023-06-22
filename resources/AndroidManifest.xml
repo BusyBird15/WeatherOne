@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="appinventor.ai_anon9222030345824.Weather" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <application android:theme="@style/AppTheme" android:label="WeatherOne" android:icon="@mipmap/ic_launcher" android:name="com.google.appinventor.components.runtime.multidex.MultiDexApplication" android:debuggable="false" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher" android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name="appinventor.ai_anon9222030345824.Weather.Alerts" android:exported="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Screen1" android:exported="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name="xyz.kumaraswamy.itoo.ItooJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" android:process=":doraemonx"/>
+        <receiver android:name="xyz.kumaraswamy.itoo.ItooReceiver" android:exported="true"/>
+        <service android:name="xyz.kumaraswamy.itoo.ItooService" android:exported="true" android:process=":doraemon"/>
+        <receiver android:name="xyz.kumaraswamy.itoo.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="appinventor.ai_anon9222030345824.Weather.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+</manifest>
